@@ -6,4 +6,6 @@ public interface Competitor {
     void jump(int height);
     boolean isOnDistance();
     void info();
+
+    String getName();
 }
