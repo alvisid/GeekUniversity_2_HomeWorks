@@ -63,4 +63,9 @@ public class Animal implements Competitor {
     public void info() {
         System.out.println(type + " " + name + " - " + onDistance);
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
 }
