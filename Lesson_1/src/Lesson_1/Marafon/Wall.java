@@ -1,7 +1,4 @@
-package Lesson_1.Course;
-
-import Lesson_1.Marafon.Competitor;
-import Lesson_1.Marafon.Obstacle;
+package Lesson_1.Marafon;
 
 public class Wall extends Obstacle {
     int height;
