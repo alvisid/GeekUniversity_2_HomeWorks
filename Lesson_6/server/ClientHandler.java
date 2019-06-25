@@ -49,6 +49,10 @@ public class ClientHandler {
                                 out.writeUTF("/serverClosed");
                                 break;
                             }
+                            if (str.startsWith("/w")) {
+                                String[] tokens = str.split(" ", 3);
+                                server.sendPersonalMsg(ClientHandler.this, tokens[1], tokens[2]);
+                            }
                             server.broadCastMsg("Client: " + str);
                         }
                     } catch (IOException e) {
@@ -85,5 +89,9 @@ public class ClientHandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getNick() {
+        return nick;
     }
 }
