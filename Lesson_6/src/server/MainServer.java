@@ -56,19 +56,29 @@ public class MainServer {
         clients.remove(client);
     }
 
-    public void broadCastMsg(Runnable runnable, String msg) {
+    public void broadCastMsg(ClientHandler from, String msg) {
         for (ClientHandler o : clients) {
             o.sendMsg(msg);
         }
     }
 
-    public void sendPersonalMsg(ClientHandler clientHandler, String token, String token1) {
-
+    public void sendPersonalMsg(ClientHandler from, String nickTo, String msg) {
+        for (ClientHandler o : clients) {
+            if (o.getNick().equals(nickTo)) {
+                o.sendMsg("from " + from.getNick() + ":" + msg);
+                from.sendMsg("to" + nickTo + ":" + msg);
+                return;
+            }
+        }
+        from.sendMsg(nickTo + " не найден в чате");
     }
 
-//    public void broadCastMsg(String from, String msg) {
-//        for (ClientHandler o : clients) {
-//            o.sendMsg(from);
-//        }
-//    }
+    public boolean isNickBusy(String nick) {
+        for (ClientHandler o : clients) {
+            if (o.getNick().equals(nick)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

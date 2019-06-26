@@ -40,10 +40,14 @@ public class ClientHandler {
                                 String[] tokens = str.split(" ");
                                 String newNick = AuthService.getNickByLoginAndPass(tokens[1], tokens[2]);
                                 if (newNick != null) {
-                                    sendMsg("/authok");
-                                    nick = newNick;
-                                    server.subscribe(ClientHandler.this);
-                                    break;
+                                    if (!server.isNickBusy(newNick)) {
+                                        sendMsg("/authok");
+                                        nick = newNick;
+                                        server.subscribe(ClientHandler.this);
+                                        break;
+                                    } else {
+                                        sendMsg("Учетная запись уже используется.");
+                                    }
                                 } else {
                                     sendMsg("Неверный логин/пароль.");
                                 }
@@ -53,18 +57,19 @@ public class ClientHandler {
                         while (true) {
                             String str = in.readUTF();
                             if (str.startsWith("/")) {
-                                if (str.equals("/end")) {
+                                if (str.startsWith("/end")) {
                                     out.writeUTF("/serverClosed");
                                     break;
                                 }
                                 if (str.startsWith("/w")) {
                                     String[] tokens = str.split(" ", 3);
+                                    String m = str.substring(tokens[1].length() + 4);
                                     server.sendPersonalMsg(ClientHandler.this, tokens[1], tokens[2]);
                                 }
                             } else {
-                                server.broadCastMsg(this, nick + " " + str);
+                                server.broadCastMsg(ClientHandler.this, nick + " " + str);
                             }
-                            server.broadCastMsg(this, "Client: " + str);
+                            System.out.println("Client: " + str);
                         }
                     } catch (IOException e) {
                         e.printStackTrace();

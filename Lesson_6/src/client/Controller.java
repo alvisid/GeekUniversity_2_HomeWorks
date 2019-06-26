@@ -4,12 +4,17 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
 
 public class Controller {
@@ -28,9 +33,7 @@ public class Controller {
     @FXML
     TextField messageField;
     @FXML
-    TextArea textArea;
-    @FXML
-    TextField textField;
+    TextArea chatArea;
     @FXML
     Button btn1;
     @FXML
@@ -54,6 +57,14 @@ public class Controller {
     final String IP_ADRESS = "localhost";
     final int PORT = 8189;
     private boolean isAuthorized;
+
+    List<TextArea> textAreas;
+
+    public void initialize(URL location, ResourceBundle resources) {
+        setAuthorized(false);
+        textAreas = new ArrayList<>();
+        textAreas.add(chatArea);
+    }
 
     private void setAuthorized(boolean isAuthorized) {
         this.isAuthorized = isAuthorized;
@@ -101,27 +112,34 @@ public class Controller {
                             setAuthorized(true);
                             break;
                         } else {
-                            textArea.appendText(str + "\n");
+//                            messageField.appendText(str + "\n");
+                            for (TextArea o : textAreas) {
+                                o.appendText(str + "\n");
+                            }
                         }
                     }
                     //блок для разбора сообщений
                     while (true) {
                         String str = in.readUTF();
-                        if (str.equals("/serverClosed")) {
-                            break;
-                        }
-                        if (str.startsWith("/clientList")) {
-                            String[] tokens = str.split(" ");
-                            Platform.runLater(new Runnable() {
-                                @Override
-                                public void run() {
-                                    clientList.getItems().clear();
-                                    for (int i = 1; i < tokens.length; i++) {
-                                        clientList.getItems().add(tokens[i]);
+                        if (str.startsWith("/")) {
+                            if (str.equals("/serverClosed")) {
+                                break;
+                            }
+                            if (str.startsWith("/clientList")) {
+                                String[] tokens = str.split(" ");
+                                Platform.runLater(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        clientList.getItems().clear();
+                                        for (int i = 1; i < tokens.length; i++) {
+                                            clientList.getItems().add(tokens[i]);
+                                        }
                                     }
-                                }
-                            });
-                            textArea.appendText(str + "\n");
+                                });
+//                                chatArea.appendText(str + "\n");
+                            }
+                        } else {
+                            chatArea.appendText(str + "\n");
                         }
                     }
                 } catch (IOException e) {
@@ -145,11 +163,13 @@ public class Controller {
 
     // метод для авторизации
     public void tryToAuth(ActionEvent actionEvent) {
-        if (socket == null || socket.isClosed()) {            // сначала подключаемся к серверу
+        if (socket == null || socket.isClosed()) {
+            // сначала подключаемся к серверу
 
             connect();
         }
-        try {            // отправка сообщений на сервер для авторизации
+        try {
+            // отправка сообщений на сервер для авторизации
 
             out.writeUTF("/auth " + loginField.getText() + " " + passwordField.getText());
             loginField.clear();
@@ -162,9 +182,9 @@ public class Controller {
 
     public void sendMsg() {
         try {
-            out.writeUTF(textField.getText());
-            textField.clear();
-            textField.requestFocus();
+            out.writeUTF(messageField.getText());
+            messageField.clear();
+            messageField.requestFocus();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -182,6 +202,13 @@ public class Controller {
             regPassField.clear();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void selectClient(MouseEvent mouseEvent) {
+        if (mouseEvent.getClickCount() == 2) {
+            MiniStage ms = new MiniStage(clientList.getSelectionModel().getSelectedItem(), out, textAreas);
+            ms.show();
         }
     }
 }

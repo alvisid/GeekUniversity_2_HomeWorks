@@ -22,25 +22,35 @@
     </HBox>
     <!---->
 
-    <!--нижняя панель для отправки сообщений-->
-    <TextArea fx:id="textArea" editable="false" VBox.vgrow="ALWAYS" />
-    <HBox fx:id="bottomPanel" managed="false" visible="false">
-        <TextField fx:id="messageField" onAction="#sendMsg" promptText="Введите текст" HBox.hgrow="ALWAYS"/>
-        <Button fx:id="btn1" onAction="#sendMsg" text="Send"/>
+    <HBox VBox.vgrow="ALWAYS">
+        <VBox HBox.hgrow="ALWAYS">
+
+            <!--нижняя панель для отправки сообщений-->
+            <TextArea fx:id="chatArea" editable="false" VBox.vgrow="ALWAYS"/>
+            <HBox fx:id="bottomPanel" managed="false" visible="false">
+                <TextField fx:id="messageField" onAction="#sendMsg" promptText="Введите текст" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="btn1" onAction="#sendMsg" text="Send"/>
+            </HBox>
+            <!---->
+        </VBox>
+        <!--Таблица пользователей-->
+        <!--        <HBox>-->
+        <ListView fx:id="clientList" onMouseClicked="#selectClient" prefWidth="200" managed="false" visible="false"/>
+        <!--        </HBox>-->
+        <!---->
     </HBox>
-    <!---->
+
 
     <!--Тестовое поле-->
-    <TextArea fx:id="sendArea" editable="false" VBox.vgrow="ALWAYS"/>
-        <HBox>
-            <TextField fx:id="textField" onAction="#sendMsg" promptText="Введите текст" HBox.hgrow="ALWAYS" />
-            <Button fx:id="btn2" onAction="#sendMsg" text="Send"/>
-        </HBox>
-    <!---->
-    <!--Таблица пользователей-->
-    <HBox>
-        <ListView fx:id="clientList" managed="false" visible="false"/>
-    </HBox>
+    <!--    <TextArea fx:id="sendArea" editable="false" VBox.vgrow="ALWAYS"/>
+            <HBox>
+                <TextField fx:id="textField" onAction="#sendMsg" promptText="Введите текст" HBox.hgrow="ALWAYS" />
+                <Button fx:id="btn2" onAction="#sendMsg" text="Send"/>
+            </HBox>-->
     <!---->
 
+
 </VBox>
+
+
+
