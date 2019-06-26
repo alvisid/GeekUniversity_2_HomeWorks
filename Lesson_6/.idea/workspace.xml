@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8968cff-2445-42d5-9faf-caec5dec4016" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_19_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/22052019_chat_new.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/DBUsers.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/sqlite-jdbc-3.19.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/MainServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_6.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_6.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/StartServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/StartServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/DBUsers.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/MainServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/MainServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,6 +18,25 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="DBUsers.db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1626012009">
@@ -38,24 +50,28 @@
         <counts>
           <entry key="fxml" value="1" />
           <entry key="java" value="6" />
+          <entry key="sql" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="6" />
+          <entry key="Scratch" value="2" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="fxml" value="1" />
-          <entry key="java" value="18" />
+          <entry key="fxml" value="219" />
+          <entry key="java" value="1145" />
+          <entry key="txt" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="18" />
-          <entry key="XML" value="1" />
+          <entry key="JAVA" value="1145" />
+          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="XML" value="219" />
         </counts>
       </usages-collector>
     </session>
@@ -65,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/AuthService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="324">
+              <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -74,10 +90,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/ClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+            <state relative-caret-position="252">
+              <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3887#3888#0" expanded="true" />
+                <element signature="e#3914#3915#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,10 +104,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/MainServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
+            <state relative-caret-position="456">
               <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1448#1449#0" expanded="true" />
+                <element signature="e#1486#1487#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,8 +118,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="130" column="5" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
+            <state relative-caret-position="1598">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,17 +130,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="289">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/74e430a9-7cea-4a7d-8014-2bddccef4c7f/console.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/sample.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="80" selection-start-line="10" selection-start-column="80" selection-end-line="10" selection-end-column="80" />
+            <state relative-caret-position="268">
+              <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -135,6 +163,11 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Павел Хапёрский &lt;kayan3000@yandex.ru&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
@@ -143,6 +176,10 @@
         <option value="$PROJECT_DIR$/server/AuthService.java" />
         <option value="$PROJECT_DIR$/server/ClientHandler.java" />
         <option value="$PROJECT_DIR$/server/MainServer.java" />
+        <option value="$PROJECT_DIR$/src/client/Main.java" />
+        <option value="$PROJECT_DIR$/src/server/AuthService.java" />
+        <option value="$PROJECT_DIR$/src/server/MainServer.java" />
+        <option value="$PROJECT_DIR$/src/server/ClientHandler.java" />
         <option value="$PROJECT_DIR$/src/client/sample.fxml" />
         <option value="$PROJECT_DIR$/src/client/Controller.java" />
       </list>
@@ -209,10 +246,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561536941593" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/sqlite-jdbc-3.19.3.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561542730484" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DBUsers.db" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -290,12 +328,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561535521723</updated>
-      <workItem from="1561535522919" duration="1411000" />
+      <workItem from="1561535522919" duration="7715000" />
     </task>
+    <task id="LOCAL-00001" summary="Подправил проект.">
+      <created>1561537035337</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561537035337</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1411000" />
+    <option name="totallyTimeSpent" value="7715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -308,8 +354,8 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23997134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" weight="0.32884097" />
+      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -324,12 +370,42 @@
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Database" weight="0.3295129" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Designer" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.23997134" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="4" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.3045822" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Database" order="2" weight="0.3295129" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -337,26 +413,40 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Подправил проект." />
+    <option name="LAST_COMMIT_MESSAGE" value="Подправил проект." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/server/ClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+        <state relative-caret-position="252">
+          <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3887#3888#0" expanded="true" />
+            <element signature="e#3914#3915#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/MainServer.java">
+    <entry file="file://$PROJECT_DIR$/src/server/AuthService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="324">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/StartServer.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -365,32 +455,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/AuthService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="289">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/sample.fxml">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5703cca2-67b5-4666-a33f-fcc5647b893d/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/74e430a9-7cea-4a7d-8014-2bddccef4c7f/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/MainServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="80" selection-start-line="10" selection-start-column="80" selection-end-line="10" selection-end-column="80" />
+        <state relative-caret-position="456">
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1448#1449#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="130" column="5" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
+        <state relative-caret-position="1598">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

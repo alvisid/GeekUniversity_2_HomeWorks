@@ -30,6 +30,12 @@ public class ClientHandler {
                         //authorization
                         while (true) {
                             String str = in.readUTF();
+                            //егистрация пользователя
+                            if (str.startsWith("addUser")) {
+                                String[] tokens = str.split(" ");
+                                AuthService.addUser(tokens[1], tokens[2], tokens[3]);
+                                sendMsg("Регистрация пользователя прошла успешно");
+                            }
                             if (str.startsWith("/auth")) {
                                 String[] tokens = str.split(" ");
                                 String newNick = AuthService.getNickByLoginAndPass(tokens[1], tokens[2]);
@@ -46,15 +52,19 @@ public class ClientHandler {
                         //send message
                         while (true) {
                             String str = in.readUTF();
-                            if (str.equals("/end")) {
-                                out.writeUTF("/serverClosed");
-                                break;
+                            if (str.startsWith("/")) {
+                                if (str.equals("/end")) {
+                                    out.writeUTF("/serverClosed");
+                                    break;
+                                }
+                                if (str.startsWith("/w")) {
+                                    String[] tokens = str.split(" ", 3);
+                                    server.sendPersonalMsg(ClientHandler.this, tokens[1], tokens[2]);
+                                }
+                            } else {
+                                server.broadCastMsg(this, nick + " " + str);
                             }
-                            if (str.startsWith("/w")) {
-                                String[] tokens = str.split(" ", 3);
-                                server.sendPersonalMsg(ClientHandler.this, tokens[1], tokens[2]);
-                            }
-                            server.broadCastMsg("Client: " + str);
+                            server.broadCastMsg(this, "Client: " + str);
                         }
                     } catch (IOException e) {
                         e.printStackTrace();

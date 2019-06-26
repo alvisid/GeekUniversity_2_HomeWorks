@@ -56,7 +56,7 @@ public class MainServer {
         clients.remove(client);
     }
 
-    public void broadCastMsg(String msg) {
+    public void broadCastMsg(Runnable runnable, String msg) {
         for (ClientHandler o : clients) {
             o.sendMsg(msg);
         }
@@ -65,4 +65,10 @@ public class MainServer {
     public void sendPersonalMsg(ClientHandler clientHandler, String token, String token1) {
 
     }
+
+//    public void broadCastMsg(String from, String msg) {
+//        for (ClientHandler o : clients) {
+//            o.sendMsg(from);
+//        }
+//    }
 }

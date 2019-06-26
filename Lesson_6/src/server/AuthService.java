@@ -20,6 +20,16 @@ public class AuthService {
         }
     }
 
+    public static void addUser(String login, String pass, String nick) {
+        //добавление пользователя при регистрации
+        String sql = String.format("INSERT INTO userTable (login, password, nickname) " + "VALUES ('%s', '%s', '%s')", login, pass.hashCode(), nick);
+        try {
+            stmt.execute(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static String getNickByLoginAndPass(String login, String pass) {
         // формирование запроса
         String sql = String.format("SELECT nickname FROM main where login = '%s' and password = '%s'", login, pass);
