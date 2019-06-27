@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="center" xmlns="http://javafx.com/javafx/8.0.121"
+      fx:controller="src.client.Controller">
+
+    <!--верхняя панель для регистрации-->
+    <HBox fx:id="regPanel">
+        <TextField HBox.hgrow="ALWAYS" promptText="Логин" fx:id="regLogField"/>
+        <TextField HBox.hgrow="ALWAYS" promptText="Ник" fx:id="regNickField"/>
+        <PasswordField promptText="Пароль" fx:id="regPassField"/>
+        <Button fx:id="btnPass" text="Регистрация" onAction="#addNewUser"/>
+    </HBox>
+    <!---->
+
+    <!--верхняя панель для авторизации-->
+    <HBox fx:id="upperPanel">
+        <TextField HBox.hgrow="ALWAYS" promptText="Логин" fx:id="loginField"/>
+        <PasswordField promptText="Пароль" fx:id="passwordField" onAction="#tryToAuth"/>
+        <Button text="Авторизоваться" onAction="#tryToAuth"/>
+    </HBox>
+    <!---->
+
+    <HBox VBox.vgrow="ALWAYS">
+        <VBox HBox.hgrow="ALWAYS">
+
+            <!--нижняя панель для отправки сообщений-->
+            <TextArea fx:id="chatArea" editable="false" VBox.vgrow="ALWAYS"/>
+            <HBox fx:id="bottomPanel" managed="false" visible="false">
+                <TextField fx:id="messageField" onAction="#sendMsg" promptText="Введите текст" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="btn1" onAction="#sendMsg" text="Send"/>
+            </HBox>
+            <!---->
+        </VBox>
+        <!--Таблица пользователей-->
+        <!--        <HBox>-->
+        <ListView fx:id="clientList" onMouseClicked="#selectClient" prefWidth="200" managed="false" visible="false"/>
+        <!--        </HBox>-->
+        <!---->
+    </HBox>
+
+
+    <!--Тестовое поле-->
+    <!--    <TextArea fx:id="sendArea" editable="false" VBox.vgrow="ALWAYS"/>
+            <HBox>
+                <TextField fx:id="textField" onAction="#sendMsg" promptText="Введите текст" HBox.hgrow="ALWAYS" />
+                <Button fx:id="btn2" onAction="#sendMsg" text="Send"/>
+            </HBox>-->
+    <!---->
+
+
+</VBox>
+
+
+
